@@ -1,4 +1,5 @@
 .wrapper {
+  overflow: hidden;
   padding-left: 18px;
   padding-right: 18px;
   max-width: 1200px;
@@ -10,6 +11,6 @@
 
   .wrapper {
     padding-left: 0px;
-  padding-right: 0px;
+    padding-right: 0px;
   }
 }
