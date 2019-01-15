@@ -3,4 +3,13 @@
   padding-right: 18px;
   max-width: 1200px;
   margin: 0 auto;
+
+  &--medium {
+    max-width: 976px;
+  }
+
+  .wrapper {
+    padding-left: 0px;
+  padding-right: 0px;
+  }
 }
