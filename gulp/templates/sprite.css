@@ -1,8 +1,14 @@
+/* Do not edit modules sprite*/
+
 {{#shapes}}
+  {{#first}}
+    .icon {
+      background-image: url('/assets/images/{{{sprite}}}');
+    }
+  {{/first}}
   .icon--{{base}} {
     width: {{width.outer}}px;
     height: {{height.outer}}px;
-    background-image: url('/temp/sprite/css/{{{sprite}}}');
     background-position: {{position.relative.xy}};
   }
 {{/shapes}}
