@@ -1,5 +1,6 @@
 var $ = require('jquery')
+import Person from "./modules/Person"
+//var Person = require('./modules/Person')
 
-var Person = require('./modules/Person')
-
-alert('testing from w123ds')
+var john = new Person("John", "orange")
+john.greet()
