@@ -3,7 +3,7 @@ class Person {
     this.name = fullName;
     this.favoriteColor = favColor;
   }
-  
+
   greet() {
     console.log('Hi There',this.name + this.favoriteColor)
   }
