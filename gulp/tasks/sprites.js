@@ -6,6 +6,11 @@ svg2png = require('gulp-svg2png')
 
 var config = {
   mode: {
+    shape: {
+      spacing: {
+        padding: 1
+      }
+    },
     css: {
       variables: {
         replaceSvgWithPng: function () {
