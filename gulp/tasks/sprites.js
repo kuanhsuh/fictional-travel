@@ -6,8 +6,15 @@ svg2png = require('gulp-svg2png')
 
 var config = {
   mode: {
-    sprite: 'sprite.svg',
     css: {
+      variables: {
+        replaceSvgWithPng: function () {
+          return function (sprite, render) {
+            return render(sprite).split('.svg').join('.png')
+          }
+        }
+      },
+      sprite: 'sprite.svg',
       render: {
         css: {
           template: './gulp/templates/sprite.css'
@@ -28,7 +35,7 @@ gulp.task('createSprite', ['beginClean'],function() {
 })
 
 gulp.task('createPngCopy', ['createSprite'],function() {
-  return gulp.src('./app/temp/sprite/css/svg/*.svg')
+  return gulp.src('./app/temp/sprite/css/*.svg')
     .pipe(svg2png())
     .pipe(gulp.dest('./app/temp/sprite/css'))
 })
